@@ -1,1 +1,4 @@
-/app/users.sqlite3
+/app/__pycache__
+/venv
+/.idea
+/app/db.sqlite3

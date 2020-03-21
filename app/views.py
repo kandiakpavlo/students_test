@@ -9,7 +9,7 @@ bp = Blueprint('other', __name__, template_folder='template')
 
 @bp.route('/')
 def home():
-    return render_template("home.html", article=articles.query.all())
+    return render_template("home.html", article=articles.query.all()[::-1])
 
 
 @bp.route('/add_article', methods=['GET', 'POST'])
