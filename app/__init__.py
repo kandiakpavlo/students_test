@@ -1,7 +1,8 @@
 from flask import Flask
-from .database import db
+
 from .config import Config
-from .views import st, bp
+from .database import db
+from .veiws import students_api
 
 
 def create_app():
@@ -12,7 +13,5 @@ def create_app():
     with app.test_request_context():
         db.create_all()
 
-    app.register_blueprint(st)
-    app.register_blueprint(bp)
-
+    app.register_blueprint(students_api)
     return app
