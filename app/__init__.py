@@ -2,7 +2,7 @@ from flask import Flask
 
 from .config import Config
 from .database import db
-from .veiws import students_api
+from .views import students_api
 
 
 def create_app():
